@@ -4,154 +4,76 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fonds d'investissement CITADELLE</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background-color: #f5f7fa;
-      color: #1a1a1a;
-    }
+    body { margin:0; font-family:'Segoe UI',sans-serif; background:#f5f7fa; color:#1a1a1a; }
+    nav { text-align:center; background:#dee4ea; padding:1rem; }
+    nav a { margin:0 1rem; color:#2c3e50; text-decoration:none; font-weight:600; }
     .citadelle-container {
-      position: relative;
-      background: url('citadelle.jpg') no-repeat center/contain;
-      height: 100vh;
-      width: 100%;
-      background-color: #dbe3e9;
+      position:relative; background:url('citadelle.jpg') no-repeat center/cover;
+      height:100vh; width:100%;
     }
-    .citation-vauban {
-      position: absolute;
-      top: 3%;
-      left: 50%;
-      transform: translateX(-50%);
-      font-family: 'Playfair Display', serif;
-      font-size: 1.2rem;
-      color: #1d1d1d;
-      background-color: rgba(255, 255, 255, 0.8);
-      padding: 12px 24px;
-      border-radius: 6px;
-      font-style: italic;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    .citation-vauban{
+      position:absolute; top:3%; left:50%; transform:translateX(-50%);
+      font-size:1.1rem; background:rgba(255,255,255,0.85);
+      padding:12px 24px; border-radius:6px; font-style:italic; box-shadow:0 4px 10px rgba(0,0,0,.1);
     }
-    .bastion {
-      position: absolute;
-      width: 140px;
-      height: auto;
-      padding: 10px;
-      background-color: rgba(255,255,255,0.85);
-      border: 2px solid #2f3e46;
-      border-radius: 8px;
-      text-align: center;
-      font-weight: bold;
-      font-size: 0.95rem;
-      cursor: pointer;
-      transition: transform 0.2s ease;
+    .bastion{
+      position:absolute; width:160px; padding:10px;
+      background:rgba(255,255,255,0.88); border:2px solid #2f3e46; border-radius:8px;
+      text-align:center; font-weight:700; font-size:.95rem; color:#1a1a1a;
+      text-decoration:none; cursor:pointer; transition:transform .2s ease;
     }
-    .bastion:hover {
-      transform: scale(1.05);
+    .bastion:hover{ transform:scale(1.05); }
+    .bastion-description{
+      display:none; position:absolute; top:100%; left:50%; transform:translateX(-50%);
+      width:260px; padding:12px; background:rgba(255,255,255,.97); border-radius:8px;
+      font-size:.9rem; font-weight:400; color:#2a2a2a; box-shadow:0 8px 20px rgba(0,0,0,.12);
     }
-    .bastion-description {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 260px;
-      padding: 14px;
-      background: rgba(255,255,255,0.95);
-      border-radius: 8px;
-      font-size: 0.9rem;
-      font-weight: 300;
-      color: #2a2a2a;
-      font-family: 'Roboto', sans-serif;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      z-index: 10;
-    }
-    .bastion:hover .bastion-description {
-      display: block;
-    }
-    #intro {
-      padding: 5rem 2rem;
-      text-align: center;
-      background: #e9edf2;
-    }
-    #intro h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.4rem;
-      color: #1a1a1a;
-    }
-    #intro p {
-      font-size: 1.1rem;
-      max-width: 800px;
-      margin: 1rem auto;
-      color: #3a3a3a;
-      font-weight: 300;
-    }
-    .scroll-reveal {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: opacity 1s ease-out, transform 1s ease-out;
-    }
-    .scroll-reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    .bastion:hover .bastion-description{ display:block; }
+    #intro{ padding:4rem 2rem; text-align:center; background:#e9edf2; }
+    #intro h1{ font-size:2.2rem; margin:0 0 .5rem 0; }
+    #intro p{ font-size:1.05rem; max-width:820px; margin:.5rem auto 0; font-weight:300; }
   </style>
 </head>
 <body>
-  <div class="citadelle-container">
-    <div class="citation-vauban">
-      « Une place bien fortifiée n’est pas celle qui résiste toujours, mais celle dont la perte coûte cher à l’ennemi. » — Vauban
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="influence.html">Influence</a>
+    <a href="reseaux.html">Réseaux sociaux</a>
+    <a href="cybersecurite.html">Cybersécurité</a>
+    <a href="softpower.html">Soft Power</a>
+  </nav>
+
+  <div class="citadelle-container" role="img" aria-label="Carte de la citadelle avec quatre bastions">
+    <div class="citation-vauban">« Une place bien fortifiée n’est pas celle qui résiste toujours,
+      mais celle dont la perte coûte cher à l’ennemi. » — Vauban
     </div>
-    <a href="influence.html" class="bastion" style="top: 20%; left: 25%;">
+
+    <a href="influence.html" class="bastion" style="top:20%; left:25%;">
       Influence stratégique
-      <div class="bastion-description">
-        Conseil, analyse géopolitique, narration stratégique pour les institutions et acteurs exposés.
-      </div>
+      <div class="bastion-description">Conseil, analyse géopolitique et narration stratégique.</div>
     </a>
-    <a href="reseaux.html" class="bastion" style="top: 20%; right: 25%;">
+
+    <a href="reseaux.html" class="bastion" style="top:20%; right:25%;">
       Réseaux sociaux
-      <div class="bastion-description">
-        Réseau social français éducatif, valorisant la connaissance, le savoir-faire et la culture.
-      </div>
+      <div class="bastion-description">Réseaux éducatifs, éthiques, valorisant le savoir et la créativité.</div>
     </a>
-    <a href="cybersecurite.html" class="bastion" style="bottom: 20%; left: 25%;">
+
+    <a href="cybersecurite.html" class="bastion" style="bottom:20%; left:25%;">
       Cybersécurité
-      <div class="bastion-description">
-        Cloud souverain, sécurité des données sensibles, infrastructures critiques protégées.
-      </div>
+      <div class="bastion-description">Protection souveraine des données et des infrastructures.</div>
     </a>
-    <a href="softpower.html" class="bastion" style="bottom: 20%; right: 25%;">
+
+    <a href="softpower.html" class="bastion" style="bottom:20%; right:25%;">
       Soft Power
-      <div class="bastion-description">
-        Soutien aux créateurs culturels français diffusant une vision libre et forte de la France.
-      </div>
+      <div class="bastion-description">Création culturelle et rayonnement intellectuel français.</div>
     </a>
   </div>
 
   <section id="intro">
-    <h1>Bienvenue sur le site du Fonds d'investissement CITADELLE</h1>
-    <p>
-      CITADELLE est un fonds souverain qui soutient les initiatives françaises qui forgent l’indépendance stratégique de la nation : information, numérique, culture, influence.
-    </p>
-    <div class="scroll-reveal" id="citadelle-texte">
-      <p><em>« Monsieur l’abbé, je déteste ce que vous écrivez, mais je donnerai ma vie pour que vous puissiez continuer à écrire. » — Voltaire, lettre à l’abbé Le Riche, 6 février 1770</em></p>
-      <p><strong>CITADELLE</strong> est un fonds d’investissement souverain né d’une urgence : celle de protéger et libérer l’esprit français dans un monde saturé de récits imposés, de dépendances numériques et de manipulations informationnelles. Coincée entre l’hégémonie culturelle et technologique anglo-saxonne d’un côté, et les entreprises de déstabilisation informationnelle venues de puissances autoritaires de l’autre, la pensée française est en danger.</p>
-      <p><strong>CITADELLE</strong> vise à promouvoir toutes les initiatives qui renforcent l’influence de la France en Europe et dans le monde. Ce fonds s’attache à lutter contre toutes les formes d’ingérence étrangère dans la sphère informationnelle, à reconstruire une autonomie cognitive, et à défendre un modèle de pensée libre, humaniste et universel.</p>
-      <p>La France a été un phare dans l’histoire du monde. Des Lumières à la Déclaration des Droits de l’Homme et du Citoyen, elle a porté haut les valeurs de <strong>liberté, égalité, fraternité</strong>. Aujourd’hui, ses adversaires cherchent à l'affaiblir en la réduisant à ses fautes, en culpabilisant son peuple, en sapant sa confiance intellectuelle. <strong>CITADELLE</strong> se dresse contre cette entreprise de démolition culturelle.</p>
-      <p><strong>CITADELLE cherche à créer un espace de liberté et de protection cognitive</strong>, afin de s’émanciper des influences étrangères qui nous écartent des véritables enjeux et objectifs. Notre ambition est claire : redonner à chaque citoyen français la capacité de penser librement, d’agir souverainement, et de faire rayonner dans le monde un modèle profondément humaniste, résolument indépendant et ouvert à l’universel.</p>
-    </div>
+    <h1>Bienvenue sur le Fonds d'investissement CITADELLE</h1>
+    <p>CITADELLE finance les initiatives françaises qui renforcent notre souveraineté informationnelle,
+      numérique et culturelle. Explorez les quatre bastions pour découvrir nos axes d’intervention.</p>
   </section>
-
-  <script>
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    });
-    document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
-  </script>
 </body>
 </html>
